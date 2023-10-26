@@ -1,10 +1,10 @@
 # projeto_computacao_sociedade
 
 <h2>Participantes:</h2>
-<li>
-  * Ana Beatriz
-  * Antônio Augusto
-  * Cláudio
-  * Danilo Teixeira
-  * Walter Lins
-</li>
+<ul>
+  <li>Ana Beatriz</li>
+  <li>Antônio Augusto</li>
+  <li>Cláudio</li>
+  <li>Danilo Teixeira</li>
+  <li>Walter Lins</li>
+</ul>
