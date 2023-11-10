@@ -10,8 +10,8 @@ int main()
     FILE* fp = fopen("C:\\Users\\anabi\\OneDrive\\Documentos\\data.csv", "a+");
  
     
-    int contrato,doacao;
-    double CPF;
+     char contrato[50],doacao[50],CPF[50];
+
  
     if (!fp) {
         // Error in file opening
@@ -21,16 +21,24 @@ int main()
  
     // Asking user input for the
     // new record to be added
-    printf("\nEnter Account Holder Name\n");
-    scanf("%d", &contrato);
-    printf("\nEnter Account Number\n");
-    scanf("%d", &doacao);
-    printf("\nEnter Available Amount\n");
-    scanf("%lf", &CPF);
+    printf("\nDe entrada no numero de contrato\n");
+    scanf("%s", contrato);
+    printf("\nEntre valor de doacao\n");
+    scanf("%s", doacao);
+    printf("\nDe entrada no CPF\n");
+    scanf("%s", CPF);
  
     // Saving data in file
-    fprintf(fp, "%d; %d; %1.lf\n", contrato,
+
+    if(CPF==NULL){
+        //erro nao identificado
+        fprintf(fp, "000000%s; 000000000%s; 00000000000000000\n", contrato,
             doacao, CPF);
+    }
+    else{
+        fprintf(fp, "00000%s; 000000000%s; 020000%s\n", contrato,
+            doacao, CPF);
+    }
  
     printf("\nNew Account added to record");
  
